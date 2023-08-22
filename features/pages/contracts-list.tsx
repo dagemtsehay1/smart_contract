@@ -1,5 +1,6 @@
 import { Box, Button, Table } from "@mantine/core";
 import { Balance } from "../components/balance";
+import { getUserBalance } from "../api/api";
 
 const elements = [
     { date:"March 3 , 2023",status:"Submited",content:"test 123" },
@@ -18,7 +19,7 @@ export default function ContractsListPage(){
           <td>{element.status}</td>
           <td>
             {element.status == "Submited" ?<Button size="xs" className="bg-primary ml-2">Accept</Button> :
-            <Button size="xs" className="bg-yellow-600 hover:bg-yellow-700 ml-2">Delivered</Button>}
+            <Button size="xs" className="bg-yellow-600 hover:bg-yellow-700 ml-2" onClick={()=>getUserBalance("0x3bFA1DcBC2755278c611ECd418191521f8d78399")}>Delivered</Button>}
             </td>
         
         </tr>

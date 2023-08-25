@@ -5,7 +5,10 @@ import { MantineProvider } from '@mantine/core';
 import { Provider } from 'react-redux';
 import { store } from '@/store/app.store';
 import { Shell } from '@/features/components/shell';
-
+// import dynamic from 'next/dynamic'
+// const Shell = dynamic(() => import('@/features/components/shell'), {
+//   ssr: false
+// })
 export default function App(props: AppProps) {
   const { Component, pageProps } = props;
 

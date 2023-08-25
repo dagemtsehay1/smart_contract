@@ -30,6 +30,7 @@ export function RTE(props: RTEProps) {
       props.onChange(editor.getHTML())
     },
   });
+  editor?.setEditable(false);
 
   return (
     <RichTextEditor editor={editor}>
